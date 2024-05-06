@@ -10,6 +10,7 @@ const TRANSPARENT_NAV_PAGES = [ 'login' ];
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent implements OnInit {
 
   @HostBinding('class.transparent') transparent = false;

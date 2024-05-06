@@ -51,7 +51,10 @@
                 "input": "src/app/styles/light.css",
                 "bundleName": "mdc-light-deeppurple",
                 "inject": false
-              }
+              },
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/app/styles"]

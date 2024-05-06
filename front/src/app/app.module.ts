@@ -8,16 +8,28 @@ import { AppRoutingModule } from 'app/app-routing.module';
 import { AppComponent } from 'app/app.component';
 import { BaseModule } from 'app/base/base.module';
 import { SharedModule } from 'app/shared/shared.module';
+import { ProductsAdminComponent } from './product/products-admin/products-admin.component';
+import { ProductsComponent } from './product/products/products.component';
+import { DataViewModule } from 'primeng/dataview';
+import { AccordionModule } from 'primeng/accordion';
+import { PanelModule } from 'primeng/panel';
+import { ButtonModule } from 'primeng/button';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ProductsAdminComponent, ProductsComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    BaseModule
+    BaseModule,
+    DataViewModule,
+    AccordionModule,
+    PanelModule,
+    ButtonModule,
+    FormsModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'en' }
