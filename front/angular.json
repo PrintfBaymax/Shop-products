@@ -41,6 +41,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest"],
             "styles": [
+              "src/app/product/products-admin/products-admin.component.scss",
               "src/styles.scss",
               {
                 "input": "src/app/styles/dark.css",
@@ -52,7 +53,6 @@
                 "bundleName": "mdc-light-deeppurple",
                 "inject": false
               },
-              "node_modules/font-awesome/css/font-awesome.min.css",
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/primeng/resources/themes/saga-blue/theme.css"
             ],
@@ -130,24 +130,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "product-trial:build"
+            "buildTarget": "product-trial:build"
           },
           "configurations": {
             "mock": {
-              "browserTarget": "product-trial:build:mock"
+              "buildTarget": "product-trial:build:mock"
             },
             "production": {
-              "browserTarget": "product-trial:build:production"
+              "buildTarget": "product-trial:build:production"
             },
             "fr": {
-              "browserTarget": "product-trial:build:fr"
+              "buildTarget": "product-trial:build:fr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "product-trial:build"
+            "buildTarget": "product-trial:build"
           }
         },
         "lint": {
@@ -159,6 +159,5 @@
         }
       }
     }
-  },
-  "defaultProject": "product-trial"
+  }
 }

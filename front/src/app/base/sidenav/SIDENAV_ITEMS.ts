@@ -7,7 +7,8 @@ export const SIDENAV_ITEMS: SidenavItem[] = [
       en: "Products",
       fr: "Products"
     },
-    link: 'dd'
+    link: 'dd',
+    icon: 'pi pi-shopping-cart'
 
   },
   {
@@ -16,8 +17,8 @@ export const SIDENAV_ITEMS: SidenavItem[] = [
       en: "Admin",
       fr: "Admin"
     },
-    link: 'ff'
-
+    link: 'ff',
+    icon : 'pi pi-user'
   }
 
 ];

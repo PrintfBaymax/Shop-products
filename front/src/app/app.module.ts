@@ -15,6 +15,13 @@ import { AccordionModule } from 'primeng/accordion';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
+import { ProductService } from './productservice';
+import {DropdownModule} from 'primeng/dropdown';
+import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
+import {RatingModule} from 'primeng/rating';
+import {RippleModule} from 'primeng/ripple';
+import {PaginatorModule} from 'primeng/paginator';
 
 @NgModule({
   declarations: [AppComponent, ProductsAdminComponent, ProductsComponent],
@@ -30,11 +37,18 @@ import { FormsModule } from '@angular/forms';
     PanelModule,
     ButtonModule,
     FormsModule,
+    DialogModule,
+    DropdownModule,
+    InputTextModule,
+    RippleModule,
+    RatingModule,
+    PaginatorModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'en' }
+    { provide: LOCALE_ID, useValue: 'en' },
+    ProductService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor() {
