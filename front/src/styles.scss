@@ -444,9 +444,7 @@ app-footer {
 }
 
 .container{
-  display: flex;
   position: relative;
-  flex-direction: row;
   width:100%;
   border: 3px solid red;
 }
@@ -458,3 +456,15 @@ app-footer {
 .table-container {
   margin-left: 600px;
 }
+
+.home-section {
+  position: relative;
+  background: white;
+  min-height: 100vh;
+  top: 0;
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
