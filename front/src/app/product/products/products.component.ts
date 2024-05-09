@@ -12,7 +12,6 @@ import { DataView } from 'primeng/dataview';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  
   products: Product[] = data.data;
   filteredProducts : Product[] = [];
   sortOptions: SelectItem[];
