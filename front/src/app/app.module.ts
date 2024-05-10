@@ -15,7 +15,6 @@ import { AccordionModule } from 'primeng/accordion';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
-import { ProductService } from './productservice';
 import {DropdownModule} from 'primeng/dropdown';
 import {DialogModule} from 'primeng/dialog';
 import {InputTextModule} from 'primeng/inputtext';
@@ -45,8 +44,8 @@ import {PaginatorModule} from 'primeng/paginator';
     PaginatorModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'en' },
-    ProductService
+    { provide: LOCALE_ID, useValue: 'en' }
+    
   ],
   bootstrap: [AppComponent],
 })

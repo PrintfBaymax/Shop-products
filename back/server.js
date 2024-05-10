@@ -18,7 +18,6 @@ app.use((req, res, next) => {
 
 // Endpoint pour récupérer tous les produits
 app.get('/api/products', (req, res) => {
-  console.log("GET NODE");
   fs.readFile(dataFilePath, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
@@ -31,7 +30,6 @@ app.get('/api/products', (req, res) => {
 
 // Endpoint pour ajouter un produit
 app.post('/api/products', (req, res) => {
-  console.log("ADD NODE");
   const newProduct = req.body;
   fs.readFile(dataFilePath, 'utf8', (err, data) => {
     if (err) {
@@ -56,7 +54,6 @@ app.post('/api/products', (req, res) => {
 
 // Endpoint pour mettre à jour un produit
 app.put('/api/products/:id', (req, res) => {
-  console.log("UPDATE NODE");
   const productId = req.params.id;
   const updatedProduct = req.body;
   fs.readFile(dataFilePath, 'utf8', (err, data) => {
@@ -92,8 +89,6 @@ app.put('/api/products/:id', (req, res) => {
 
 // Endpoint pour supprimer un produit
 app.delete('/api/products/:id', (req, res) => {
-  console.log("DELETE NODE");
-
   const productId = req.params.id;
 
   fs.readFile(dataFilePath, 'utf8', (err, data) => {

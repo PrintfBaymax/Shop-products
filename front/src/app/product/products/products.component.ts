@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild  } from '@angular/core';
-import { ProductService } from '../../productservice';
 import { Product } from '../../product';
 import { SelectItem } from "primeng/api"; 
 import { PrimeNGConfig } from "primeng/api"; 
@@ -19,7 +18,7 @@ export class ProductsComponent implements OnInit {
   @ViewChild('dv') dv: DataView;
   sortField: string;
   sortKey: string ;
-  constructor(private productService: ProductService, private primengConfig: PrimeNGConfig) { }   
+  constructor(private primengConfig: PrimeNGConfig) { }   
 
   ngOnInit(): void {
     this.sortOptions = [
@@ -45,29 +44,4 @@ export class ProductsComponent implements OnInit {
   onInput(event: any, filterMatchMode:string = "contains" ) {
     this.dv.filter( event.target.value, filterMatchMode );
   }
-
-  first = 0;
-
-  rows = 10;
-
-  next() {
-    this.first = this.first + this.rows;
-  }
-
-  prev() {
-      this.first = this.first - this.rows;
-  }
-
-  reset() {
-      this.first = 0;
-  }
-
-  isLastPage(): boolean {
-      return this.products ? this.first === (this.products.length - this.rows): true;
-  }
-
-  isFirstPage(): boolean {
-      return this.products ? this.first === 0 : true;
-  }
-
 }
