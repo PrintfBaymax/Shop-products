@@ -37,6 +37,7 @@ export class BreadcrumbComponent implements OnInit {
   }
 
   private buildBreadcrumb(path: string): void {
+    console.log(path)
     const firstPath: SidenavItem = this.sidenavItems.find(item => '/' + item.id === path);
     if (firstPath) {
       this.items.push({
@@ -45,6 +46,17 @@ export class BreadcrumbComponent implements OnInit {
         command: () => this.sidenavService.setCurrentEntityName('')
       });
     }
+    if(path==="/products"){
+      this.items = [
+        { label: 'Home', routerLink: '/' },
+        { label: 'Products', routerLink: '/products' }];
+    }
+    if(path==="/admin/products")
+      {
+        this.items = [
+        { label: 'Home', routerLink: '/' },
+        { label: 'Admin', routerLink: '/admin/products' }];
+      }
   }
 
 }

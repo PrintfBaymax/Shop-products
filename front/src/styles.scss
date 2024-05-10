@@ -430,3 +430,41 @@ app-footer {
     left: 0 !important;
   }
 }
+
+.tborder tbd{
+  border: 1px solid black; /* Ajoutez votre style de bordure ici */
+}
+
+.custom-table {
+  max-width: 3000px; /* Définir la largeur maximale du tableau */
+  margin:  auto; /* Centrer le tableau horizontalement */
+  padding: 20px; /* Espace autour du tableau */
+  background-color: grey; /* Fond blanc pour le tableau */
+  border: 1px solid #ccc; /* Bordure autour du tableau */
+}
+
+.container{
+  position: relative;
+  width:100%;
+  border: 3px solid white;
+}
+
+.left-align {
+  float: left;
+}
+
+.table-container {
+  margin-left: 600px;
+}
+
+.home-section {
+  position: relative;
+  background: white;
+  min-height: 100vh;
+  top: 0;
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
